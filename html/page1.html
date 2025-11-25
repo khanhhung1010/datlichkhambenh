@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Đặt Lịch Khám Bệnh</title>
+    <link rel="stylesheet" href="/css/page1.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"> Phòng Khám Sức Khỏe Toàn Diện</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/html/page1.html" class="active">Trang chủ</a></li>
+          <li><a href="/html/page2.html">Lịch khám</a></li>
+          <li><a href="/html/page3.html">Hồ sơ bệnh nhân</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="login.html" class="btn-login">Đăng nhập</a>
+
+        <a href="login.html" class="btn-login">Đăng Ký</a>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <div class="imgg">
+          <div class="box">
+            <h1>Chào mừng đến với hệ thống đặt lịch khám bệnh</h1>
+            <div class="boxcon">
+              <a href="login.html" class="btn-login hai">Đặt Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boxlon">
+        <div class="info-card specialty-card">
+          <h3 class="card-title">Chuyên Khoa</h3>
+          <ul class="specialty-list">
+            <li class="specialty-item">
+              <a href="#" data-specialty="noi_khoa">💊 Nội Khoa</a>
+            </li>
+            <li class="specialty-item">
+              <a href="#" data-specialty="tim_mach">❤️ Tim Mạch</a>
+            </li>
+            <li class="specialty-item">
+              <a href="#" data-specialty="noi_tiet">🧪 Nội Tiết</a>
+            </li>
+            <li class="specialty-item">
+              <a href="#" data-specialty="rang_ham_mat">🦷 Răng Hàm Mặt</a>
+            </li>
+            <li class="specialty-item">
+              <a href="#" data-specialty="vat_ly_tri_lieu"
+                >🌿 Vật Lý Trị Liệu</a
+              >
+            </li>
+          </ul>
+        </div>
+       <div class="info-card hours-card">
+            <h3 class="card-title">Giờ Mở Cửa</h3>
+            <ul class="hours-list">
+                <li>Thứ 2 - Thứ 6: 8:00 - 18:00</li>
+                <li>        Thứ 7: 8:00 - 12:00</li>
+                <li>     Chủ Nhật: Nghỉ</li>
+            </ul>
+        </div>
+      
+      <div class="booking-form-area">
+        <h3 class="section-title">Đặt Lịch Nhanh</h3>
+        
+        <form class="quick-booking-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label‍ class="styledatlich" for="name">Họ Và Tên</label‍>
+                    <input type="text" id="name" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" required />
+                </div>
+                <div class="form-group">
+                    <label  class="styledatlich" for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="090 123 4567" required />
+                </div>
+                <div class="form-group full-width">
+                    <label class="styledatlich" for="email">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="example@email.com "  required />
+                </div>
+                <div class="form-group">
+                    <label class="styledatlich" for="specialty-select">Chọn Chuyên Khoa</label>
+                    <select id="specialty-select" class="form-input" required>
+                        <option value="">-- Chọn chuyên khoa --</option>
+                        <option value="noi_khoa">Nội Khoa</option>
+                        <option value="tim_mach">Tim Mạch</option>
+                         <option value="noi_tiet">Nội Tiết</option>
+                        <option value="rang_ham_mat">Răng Hàm Mặt</option>
+                         <option value="vat_li_tri_lieu">Vật Lý Trị Liệu</option>
+                        
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label class="styledatlich" for="date-select">Chọn Ngày Khám</label>
+                    <input type="date" id="date-select" class="form-input" required />
+                </div>
+                <div class="form-group">
+                    <label class="styledatlich" for="time-select">Chọn Giờ Khám</label>
+                    <select id="time-select" class="form-input" required>
+                        <option value="">-- Chọn giờ trống --</option>
+                        <option value="06:00">06:00 AM</option>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        </select>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-button">ĐẶT LỊCH NGAY</button>
+        </form>
+    </div>
+    </main>
+        <footer>
+      <div class="footer">
+        <div class="boxfooter footercon1">
+          <h3>thông tin</h3>
+          <ul>
+            <li>Blog Sức Khỏe</li>
+            <li>Quy tắc hoạt động</li>
+            <li>Tổng hợp luật khám bệnh</li>
+          </ul>
+        </div>
+        <div class="boxfooter footercon2">
+          <h3>Liên Hệ</h3>
+          <ul>
+            <li>Email: support@phongkham.vn.</li>
+            <li>Hotline: 1900 1234.</li>
+          </ul>
+        </div>
+        <div class="boxfooter footercon3">
+          <h3>Kết Nối</h3>
+          <div style="display: flex">
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-facebook"></i></li>
+            </div>
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-tiktok"></i></li>
+            </div>
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-youtube"></i></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+/* Thiết lập cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+}
+
+/* --- Thanh Header và Menu --- */
+
+.main-header {
+  /* Sử dụng Flexbox để căn chỉnh các mục */
+  display: flex;
+  justify-content: space-between; /* Đẩy các mục ra hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+
+  background-color: #ffffff; /* Nền trắng */
+  padding: 15px 30px; /* Đệm trên/dưới và trái/phải */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+}
+
+/* Logo */
+.logo a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Màu xanh dương chủ đạo */
+  text-decoration: none;
+}
+
+/* Menu Điều hướng */
+.main-nav ul {
+    /*  Bỏ dấu chấm đầu dòng */
+  list-style: none;         
+  display: flex;
+  gap: 30px; 
+  /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333; /* Màu chữ đen */
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hiệu ứng khi di chuột (hover) */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #007bff; /* Thay đổi màu khi active/hover */
+   text-shadow: 1px 0 0 currentColor;
+  
+}
+
+/* Tạo gạch chân màu xanh khi active */
+.main-nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* Nút Đăng nhập */
+.btn-login {
+ display: flex;
+  background-color: #045cff; /* Màu xanh lá cây */
+  width: 110px;
+  height: 35px;
+  color: white;
+  margin: 5px;
+  padding:10px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.9s;
+  justify-content: center;
+ 
+}
+
+.btn-login:hover {
+  background-color: #1e7e34;
+}
+.imgg {
+  background-image: url(https://vietmyclinic.com.vn/wp-content/uploads/2019/12/khoa-hinh-anh.jpg);
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  background-position: center center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+}
+.box {
+  width: 390px;
+  
+}
+.boxcon{
+    margin-top: 20px;
+   
+}
+.boxlon {
+  width: 990px;
+  background-color: re
+  height: 500px;
+  justify-self: center;
+}
+/* =============================================== */
+
+/* Thiết lập Layout Chính (Hai cột lớn) */
+.booking-layout {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa sidebar và form */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Căn giữa layout */
+ 
+}
+
+/* Sidebar (Chuyên khoa & Giờ) - Cột Trái */
+.sidebar-info {
+    flex: 0 0 300px; /* Chiều rộng cố định 300px */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Khối Form (Đặt Lịch Nhanh) - Cột Phải */
+.booking-form-area {
+    flex: 1; /* Chiếm hết phần còn lại */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Định dạng chung cho các Card Thông tin */
+.info-card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #939393;
+    padding-bottom: 5px;
+}
+
+/* --- Định dạng Chuyên Khoa --- */
+.specialty-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specialty-item a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.specialty-item a:hover {
+    color: #007bff;
+    background-color: #b9b9b9;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+/* --- Định dạng Giờ Mở Cửa --- */
+.hours-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    color: #555;
+    font-weight: 700;
+}
+
+.hours-list li {
+    padding: 4px 0;
+}
+
+/* --- Định dạng Form Đặt Lịch --- */
+.section-title {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+.form-grid {
+    display: grid;
+    /* Chia thành 2 cột bằng nhau */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+}
+.styledatlich{
+    color: black;
+    font-weight: 600;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Trường Email chiếm toàn bộ chiều rộng (1 cột) */
+.form-group.full-width {
+    grid-column: 1 / -1; /* Bắt đầu từ cột 1 và kết thúc ở cột cuối cùng */
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #0b4fec; /* Màu xanh lá nổi bật */
+    color: white;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #3155e7;
+    color: black;
+}
+
+/* --- Media Query (Responsive) --- */
+@media (max-width: 900px) {
+    .booking-layout {
+        flex-direction: column; /* Chuyển thành 1 cột trên điện thoại/tablet */
+        padding: 20px;
+    }
+
+    .sidebar-info {
+        flex: auto; /* Chiếm chiều rộng tự động */
+        flex-direction: row; /* Chuyên khoa và Giờ Mở Cửa nằm cạnh nhau */
+    }
+    
+    .specialty-card, .hours-card {
+        flex: 1; /* Chia đều không gian giữa 2 card này */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Form cũng chỉ còn 1 cột */
+    }
+}
+
+
+
+
+
+
+
+
+/* =====================phần footer================================== */
+footer{
+    justify-self: center;
+}
+.footer {
+  width: 990px;
+  margin: 30px;
+  padding-top: 50px;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+/*  */
+li {
+  list-style: none;
+  margin: 15px;
+}
+/* logo footer */
+.logo-footer {
+  font-size: 30px;
+}
+.fa-facebook {
+  color: #155dc9;
+}
+.fa-youtube {
+  color: #ff0033;
+}
+body{
+  background-color: #e3e3e3;
+}

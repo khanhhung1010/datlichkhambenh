@@ -1,0 +1,322 @@
+/* Thiết lập cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+}
+/* --- Thanh Header và Menu --- */
+
+.main-header {
+  /* Sử dụng Flexbox để căn chỉnh các mục */
+  display: flex;
+  justify-content: space-between; /* Đẩy các mục ra hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+
+  background-color: #fdfdfd; /* Nền trắng */
+  padding: 15px 30px; /* Đệm trên/dưới và trái/phải */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+}
+/* Logo */
+.logo a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Màu xanh dương chủ đạo */
+  text-decoration: none;
+}
+
+/* Menu Điều hướng */
+.main-nav ul {
+  /*  Bỏ dấu chấm đầu dòng */
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333; /* Màu chữ đen */
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hiệu ứng khi di chuột (hover) */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #007bff; /* Thay đổi màu khi active/hover */
+  text-shadow: 1px 0 0 currentColor;
+}
+.active{
+  color: #1e7e34;
+}
+
+/* Tạo gạch chân màu xanh khi active */
+.main-nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* Nút Đăng nhập */
+.btn-login {
+  display: flex;
+  background-color: #045cff; /* Màu xanh lá cây */
+  width: 110px;
+  height: 35px;
+  color: white;
+  margin: 5px;
+  padding:10px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.9s;
+  justify-content: center;
+ 
+}
+
+.btn-login:hover {
+  background-color: #1e7e34;
+}
+/* ====================Kết thúc phần menu====================== */
+/* 
+.
+.
+.
+.
+.
+..
+
+.
+.
+
+.
+*/
+/*  ===================== phần main========================= */
+
+/* --- Thiết lập Layout Chung --- */
+main{
+ 
+   width: 990px;
+    justify-self: center;
+    border-radius: 20px;
+    border: 2px solid; 
+    margin: 40px;
+}
+.appointment-page-main {
+  background-color: #fdfdfd; /* Nền trắng cho nội dung chính */
+}
+
+.appointment-layout {
+  width: 990px;
+  display: flex; /* Bật Flexbox để chia 2 cột */
+  max-width: 900px; /* Giữ kích thước tương tự như hình ảnh */
+  margin: 40px auto; /* Căn giữa nội dung */
+  gap: 30px;
+  /* Khoảng cách giữa hai cột */
+  padding: 30px;
+  /* border: 1px solid #0f007e; */
+  border-radius: 10px;
+  justify-self: center;
+}
+
+/* --- KHỐI BÊN TRÁI: LỊCH (Calendar Section) --- */
+.calendar-section {
+  flex: 1; /* Chiếm 1 phần không gian */
+  padding-right: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.calendar-widget {
+  border: 1px solid #0e4be6;
+  border-radius: 8px;
+  padding: 15px;
+  width: 350px; /* Chiều rộng cố định cho lịch */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.nav-buttons span {
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Bảng Lịch */
+.calendar-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+
+.calendar-table th,
+.calendar-table td {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.calendar-table th {
+  color: #aaa;
+  font-weight: normal;
+}
+
+.calendar-table td {
+  border-radius: 100%;
+
+  height: 35px;
+  width: 35px;
+  line-height: 19px;
+}
+
+.calendar-table td:hover {
+  background-color: #f0f0f0;
+}
+.calendar-table td:visited{
+  background-color: #af1e1e;
+}
+.active-day {
+background-color: #28a745; 
+Màu xanh lá cho ngày đang chọn
+color: white;
+font-weight: bold;}
+/* ================================ Phần Bác sĩ =================================== */
+
+.boxbs{
+
+  width: 400px;
+  border-radius: 9px;
+ 
+}
+.boxcon{
+  display: flex;
+  background-color: rgb(239, 251, 244);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 2px green solid;
+  justify-content: center;
+ 
+}
+.avata-bác-sĩ{
+  object-fit: cover;
+  display: inline;
+border-radius: 100px;
+width: 50px;
+height: 50px;
+margin-right: 10px;
+
+
+}
+.style-tên-bs{
+  width: 180px;
+  padding: 5px;
+  color: #333;
+  
+
+}
+.BOX-BBAM-BS{
+ /* background-color: aliceblue; */
+ width: 100px;
+}
+.nút-bấn-bs1,
+.nút-bấn-bs{
+ display: block;
+ margin: 10px;
+ padding: 4px;
+ background-color: rgba(79, 194, 79, 0.764);
+ color: #1d672e;
+ border-radius: 10px;
+ text-decoration: none;
+
+}
+/* ===================style phần sác nhận qua gmail================================== */
+/* --- CSS cho textarea đẹp mắt hơn --- */
+
+/* Chọn vùng text theo ID */
+#email_input {
+   height: 0px;
+    width: 100%; 
+    min-height: 50px; /* Chiều cao tối thiểu, có thể điều chỉnh */
+    
+    /* Font và Text */
+    font-family: Arial, sans-serif; /* Font chữ dễ đọc */
+    font-size: 16px; /* Kích thước chữ */
+    color: #333; /* Màu chữ đậm */
+    text-align: left; /* Căn lề trái */
+    padding: 12px 15px; /* Khoảng cách đệm bên trong */
+    
+    /* Thiết kế Border và Nền */
+    border: 1px solid #ccc; /* Border mỏng, màu xám nhạt */
+    border-radius: 8px; /* Bo góc nhẹ nhàng */
+    background-color: #f9f9f9; /* Màu nền hơi xám để phân biệt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Shadow nhẹ tạo độ nổi */
+    
+    
+}
+
+#email_input::placeholder {
+    color: rgb(199, 199, 199); /* Màu chữ placeholder nhạt */
+    font-style: italic;
+}
+
+/* =====================phần footer================================== */
+.footer {
+  width: 990px;
+  margin: auto;
+  padding-top: 50px;
+  background-color: #fdfdfd;
+  border: 2px solid rgb(145, 145, 145);
+  border-radius: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+}
+/*  */
+li {
+  list-style: none;
+  margin: 15px;
+}
+/* logo footer */
+.logo-footer {
+  font-size: 30px;
+}
+.fa-facebook {
+  color: #155dc9;
+}
+.fa-youtube {
+  color: #ff0033;
+}
+/* fix */
+body{
+  background-color: #e3e3e3;
+}

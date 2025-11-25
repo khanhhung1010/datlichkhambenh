@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+}
+/* --- Thanh Header và Menu --- */
+
+.main-header {
+  /* Sử dụng Flexbox để căn chỉnh các mục */
+  display: flex;
+  justify-content: space-between; /* Đẩy các mục ra hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+
+  background-color: #fdfdfd; /* Nền trắng */
+  padding: 15px 30px; /* Đệm trên/dưới và trái/phải */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+}
+/* Logo */
+.logo a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Màu xanh dương chủ đạo */
+  text-decoration: none;
+}
+
+/* Menu Điều hướng */
+.main-nav ul {
+  /*  Bỏ dấu chấm đầu dòng */
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333; /* Màu chữ đen */
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hiệu ứng khi di chuột (hover) */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #007bff; /* Thay đổi màu khi active/hover */
+  text-shadow: 1px 0 0 currentColor;
+}
+.active:hover {
+  color: #15eb44;
+}
+
+/* Tạo gạch chân màu xanh khi active */
+.main-nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* Nút Đăng nhập */
+.btn-login {
+  display: flex;
+  background-color: #045cff; /* Màu xanh lá cây */
+  width: 110px;
+  height: 35px;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.9s;
+  justify-content: center;
+}
+
+.btn-login:hover {
+  background-color: #1e7e34;
+}
+/* =================================Phần thông tin cá nhân ===================== */
+
+.tieu-de {
+  width: 990px;
+  margin: auto;
+  padding-top: 50px;
+}
+.box-lớn {
+  width: 990px;
+
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  border: 2px solid rgb(231, 231, 242);
+  padding: 20px;
+  margin: 40px;
+
+  justify-self: center;
+  display: flex;
+}
+.boxcon {
+  margin: 20px;
+  border-radius: 10px;
+  /* border: 2px solid blue; */
+}
+
+.box1 {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  align-content: center;
+  margin: auto;
+}
+.box2 {
+  height: 200px;
+  width: 250px;
+  background-color: #fff;
+  align-content: center;
+  padding: 10px;
+}
+.box3 {
+  height: 200px;
+  width: 250px;
+  background-color: #fff;
+  align-content: center;
+  padding: 10px;
+}
+.box4 {
+  height: 200px;
+  width: 100px;
+  /* background-color: #fff; */
+
+  align-content: end;
+}
+.btn-cin-sua:hover {
+  background-color: rgb(99, 116, 249);
+}
+.thong-tin {
+  color: #636262;
+  padding: 5px;
+}
+
+/* ============================đi sâu vào box 1========================= */
+.anh-ca-nhan {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  clip-path: inset(90deg);
+}
+.tên-ng-use {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* mã benh-nhan */
+.ma-benh-nhan {
+  color: #636262;
+  font-size: 12px;
+}
+
+/* box 4 */
+.btn-cin-sua {
+  display: flex;
+  background-color: #1baa54; /* Màu xanh lá cây */
+
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.9s;
+  justify-content: center;
+}
+/*================================= kết thúc phần thông tin cá nhân================================ */
+
+/*=======================lịch sử khám bệnh=========================*/
+.khoi-ls-ba {
+  background-color: #fbfbfb;
+  width: 990px;
+  height: 350px;
+  padding: 30px;
+  margin: 40px;
+
+  display: block;
+  justify-self: center;
+  border-radius: 20px;
+  border: solid rgb(231, 231, 242);
+}
+/* style các phần tử con */
+.khoi-ls-ba-con1 {
+  margin: 20px;
+}
+.khoi-ls-ba-con {
+  border-radius: 20px;
+}
+/* ======================== STYLE BẢNG LỊCH SỬ BỆNH ÁN ======================= */
+
+/* .khoi-ls-ba { */
+/* ... (CSS hiện tại của .khoi-ls-ba) ... */
+overflow-x: auto;
+/* Thêm thanh cuộn ngang nếu bảng quá rộng */
+
+.khoi-ls-ba-con {
+  padding: 0 20px 20px 20px; /* Thêm đệm xung quanh bảng */
+}
+
+.khoi-ls-ba-con table {
+  width: 100%; /* Bảng chiếm toàn bộ chiều rộng của khối cha */
+  border-collapse: collapse; /* Gộp các đường viền thành một */
+  font-size: 14px;
+  table-layout: fixed; /* Giúp các cột có chiều rộng ổn định */
+}
+
+/* Style cho hàng tiêu đề (header row) */
+.khoi-ls-ba-con th {
+  background-color: #c5c5c5; /* Màu xanh chủ đạo */
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  border: none; /* Bỏ border mặc định */
+}
+
+/* Định dạng cho các ô dữ liệu (data cells) */
+.khoi-ls-ba-con td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  /* Đường kẻ ngang mỏng */
+  color: #333;
+
+  /* Ngắt chữ nếu quá dài */
+}
+
+/* Hiệu ứng khi di chuột qua các hàng */
+.khoi-ls-ba-con tr:nth-child(even) {
+  background-color: #f8f8f8; /* Màu nền xen kẽ cho dễ đọc */
+}
+
+.khoi-ls-ba-con tr:hover {
+  background-color: #8f8f8f57; /* Màu xanh nhạt khi hover */
+}
+
+/* Định dạng đặc biệt cho cột "Xem Chi Tiết" */
+.khoi-ls-ba-con td:last-child,
+.khoi-ls-ba-con th:last-child {
+  text-align: center;
+  /* Căn giữa cột hành động */
+  width: 80px; /* Chiều rộng cố định cho nút Xem */
+}
+
+/* Bo tròn góc cho tiêu đề */
+.khoi-ls-ba-con tr:first-child th:first-child {
+  border-top-left-radius: 15px 15px; /* Bo tròn góc trên bên trái */
+}
+
+.khoi-ls-ba-con tr:first-child th:last-child {
+  border-top-right-radius: 15px; /* Bo tròn góc trên bên phải */
+}
+.khoi-ls-ba-con tr:first-child th:first-child {
+}
+td {
+  font-family: initial;
+}
+.chu-xem {
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(72, 70, 81);
+}
+
+.chu-xem:hover {
+  color: blue;
+  box-shadow: 0 2px 2px blue;
+  border-radius: 20px;
+}
+/* =====================phần footer================================== */
+.footer {
+  width: 990px;
+  margin: auto;
+  padding-top: 50px;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+}
+/*  */
+li {
+  list-style: none;
+  margin: 15px;
+}
+/* logo footer */
+.logo-footer {
+  font-size: 30px;
+}
+.fa-facebook {
+  color: #155dc9;
+}
+.fa-youtube {
+  color: #ff0033;
+}
+body {
+  background-color: #e3e3e3;
+}
+/* fixx-=================  */
+.boxcon {
+  background-color: #fdfdfd;
+}

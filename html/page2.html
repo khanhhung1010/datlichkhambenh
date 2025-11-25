@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch Khám</title>
+    <link rel="stylesheet" href="/css/page2.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"> Phòng Khám Sức Khỏe Toàn Diện</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/html/page1.html" class="active" style="color:#333;">Trang chủ</a></li>
+          <li><a href="/html/page2.html">Lịch khám</a></li>
+          <li><a href="/html/page3.html">Hồ sơ bệnh nhân</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="login.html" class="btn-login">Đăng nhập</a>
+
+        <a href="login.html" class="btn-login">Đăng Ký</a>
+      </div>
+    </header>
+    <main class="appointment-page-main">
+      <div  class="appointment-layout  " >
+        <div class="calendar-section">
+          <h2 class="section-title">Chọn Lịch Hẹn & Bác Sĩ</h2>
+          <p class="subtitle">Xem lịch hẹn có sẵn</p>
+
+          <div class="calendar-widget">
+            <div class="calendar-header">
+              <span class="current-month">Thứ Ba, 23/04/2024</span>
+              <div class="nav-buttons">
+                <span class="nav-btn prev">‹</span>
+                <span class="nav-btn next">›</span>
+                <span class="nav-btn close">×</span>
+              </div>
+            </div>
+
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>CN</th>
+                  <th>Hai</th>
+                  <th>Ba</th>
+                  <th>Tư</th>
+                  <th>Năm</th>
+                  <th>Sáu</th>
+                  <th>Bảy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>26</td>
+                  <td class="active-day">29</td>
+                  <td>30</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2 style="margin: 20px;">Xác Nhận Qua Gmail</h2>
+<!-- <textarea name="email_confirmation" id="email_input" placeholder="example@email.com"></textarea> -->
+       <input name="email_confirmation" id="email_input" placeholder="example@email.com"  type="text">
+</div>
+        
+        <div>
+          <h2 style="margin: 20px; color: rgb(70, 63, 63);">chọn bác sĩ</h2>
+          <div class="boxbs">
+            
+            <div class="boxcon box1">
+              <div>
+                <img
+                  class="avata-bác-sĩ"
+                  src="/imgs/ảnh/ảnh bác sĩ 1,1.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h3 class="style-tên-bs">B.S Nguyễn a Hùng</h3>
+                <p class="style-chữ-chuyên-khóa">Răng Hàm Mặt</p>
+              </div>
+              <div class="BOX-BBAM-BS">
+                <p><a class="nút-bấn-bs1" href="">08:00 AM</a></p>
+                <p><a class="nút-bấn-bs" href="">10:00 AM</a></p>
+              </div>
+            </div>
+            <div class="boxcon box1">
+            
+                <div>
+                  <img
+                    class="avata-bác-sĩ"
+                    src="/imgs/ảnh/ảnh bác sĩ 2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="style-tên-bs">B.S Đỗ Mạnh Huấn</h3>
+                  <p class="style-chữ-chuyên-khóa">tim mạch</p>
+                </div>
+                <div class="BOX-BBAM-BS">
+                  <p><a class="nút-bấn-bs1" href="">09:00 AM</a></p>
+                  <p><a class="nút-bấn-bs" href="">11:00 AM</a></p>
+                </div>
+              </DIV>
+              <div class="boxcon box1">
+                <div>
+                  <img
+                    class="avata-bác-sĩ"
+                    src="/imgs/ảnh/ảnh bác sĩ 3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="style-tên-bs">B.S Nguyễn a Nam</h3>
+                  <p class="style-chữ-chuyên-khóa">nội khoa</p>
+                </div>
+                <div class="BOX-BBAM-BS">
+                  <p><a class="nút-bấn-bs1" href="">04:00 PM</a></p>
+                  <p><a class="nút-bấn-bs" href="">06:00 PM</a></p>
+                </div>
+              </div>
+              <div class="boxcon box1">
+                <div>
+                  <img
+                    class="avata-bác-sĩ"
+                    src="/imgs/ảnh/ảnh bác sĩ 4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="style-tên-bs">B.S Phó Đức Anh</h3>
+                  <p class="style-chữ-chuyên-khóa">Nội Tiết</p>
+                </div>
+                <div class="BOX-BBAM-BS">
+                  <p><a class="nút-bấn-bs1" href="">08:00 PM</a></p>
+                  <p><a class="nút-bấn-bs" href="">10:00 PM</a></p>
+                </div>
+              </div>
+            </div>
+            </DIV>
+        </div>
+      </div>
+    </main>
+    <!-- ============================================================================== -->
+        <footer>
+      <div class="footer">
+        <div class="boxfooter footercon1">
+          <h3>thông tin</h3>
+          <ul>
+            <li>Blog Sức Khỏe</li>
+            <li>Quy tắc hoạt động</li>
+            <li>Tổng hợp luật khám bệnh</li>
+          </ul>
+        </div>
+        <div class="boxfooter footercon2">
+          <h3>Liên Hệ</h3>
+          <ul>
+            <li>Email: support@phongkham.vn.</li>
+            <li>Hotline: 1900 1234.</li>
+          </ul>
+        </div>
+        <div class="boxfooter footercon3">
+          <h3>Kết Nối</h3>
+          <div style="display: flex">
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-facebook"></i></li>
+            </div>
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-tiktok"></i></li>
+            </div>
+            <div>
+              <li class="logo-footer"><i class="fa-brands fa-youtube"></i></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
